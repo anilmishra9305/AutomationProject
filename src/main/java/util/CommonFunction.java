@@ -4,15 +4,19 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonFunction extends TestMethodSetup{
 	
 	
 	
 	
-	
-	
+
+
+
+
 	public String readPropertyFile(String key)
 	{
 		String value="";
@@ -106,16 +110,38 @@ public class CommonFunction extends TestMethodSetup{
 		e.printStackTrace();
 		}
 		
-		
-		
-		
+	}
+	
+	
+	public void verifyResult(WebElement ele)
+	{
+		try {
+			
+			ele.isDisplayed();
+			
+		} catch (Exception e) {
+
+		e.printStackTrace();
+		}
 		
 		
 	}
 	
 	
-	
-	
+	@SuppressWarnings("deprecation")
+	public void waitForVisibiltyofElement(WebElement ele)
+	{
+		
+		try {
+			WebDriverWait wait=new WebDriverWait(driver, 60);
+
+			wait.until(ExpectedConditions.visibilityOf(ele));
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
 	
 	
 	
