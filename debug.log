@@ -1,0 +1,2 @@
+[1012/224300.782:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[1012/224300.782:ERROR:file_io_win.cc(161)] CreateFile C:\Users\ANIL\AppData\Local\Temp\scoped_dir5160_1462429378\Crashpad\settings.dat: The system cannot find the file specified. (0x2)

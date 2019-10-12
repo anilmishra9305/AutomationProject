@@ -3,11 +3,14 @@ package util;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeSuite;
 public class TestMethodSetup {
 	
 	
 
 public static WebDriver driver;
+
+@BeforeSuite
 	public void openBrowser()
 	{
 		
@@ -72,7 +75,16 @@ public static WebDriver driver;
 	}
 	
 	
-	
+	public void closeBrowser()
+	{
+		try {
+			
+			driver.quit();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 	
 
 }

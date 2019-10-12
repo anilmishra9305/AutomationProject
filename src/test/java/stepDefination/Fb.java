@@ -16,7 +16,7 @@ public class Fb extends TestMethodSetup {
 	@Given("^I open facebook website$")
 	public void i_open_facebook_website() throws Throwable {
 	   
-		t1.openBrowser();
+		//t1.openBrowser();
 		String baseUrl=com.readPropertyFile("url");
 		com.openUrl(baseUrl);
 		
